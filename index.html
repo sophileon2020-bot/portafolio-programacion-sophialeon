@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Estudiantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+
+    <!-- Escudo de la institución: guarda la imagen como escudo.png en esta carpeta -->
+    <img src="escudo.png" alt="Escudo de la institución" class="escudo" onerror="this.style.display='none'">
+
+    <h1>Registro de estudiantes</h1>
+
+    <form id="formulario">
+
+        <label>Nombre</label>
+        <input type="text" id="nombre">
+
+        <label>Grado</label>
+        <input type="text" id="grado">
+
+        <label>Nota</label>
+        <input type="number" id="nota" step="0.1">
+
+        <button type="submit">Agregar estudiante</button>
+
+    </form>
+
+    <h2>Estudiantes registrados</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Grado</th>
+                <th>Nota</th>
+                <th>Estado</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="tablaEstudiantes"></tbody>
+    </table>
+
+    <button type="button" id="btnLimpiar" class="btn-limpiar">Limpiar todos los registros</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
